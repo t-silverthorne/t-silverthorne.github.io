@@ -98,6 +98,7 @@ h3 { margin-bottom: 0.15rem; font-size: 1rem; line-height: 1.4; }
 .cv-list { margin: 0; padding: 0; list-style: none; }
 .cv-list li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem; padding: 0.55rem 0; border-top: 1px solid var(--rule); }
 .cv-list span { color: var(--muted); font-size: 0.9rem; }
+.cv-list .award-description { color: inherit; font-size: inherit; }
 .repo-list { margin: 1.25rem 0 0; padding-left: 1.2rem; }
 .repo-list li { margin: 0 0 0.7rem; }
 .event-list { display: grid; gap: 0.25rem; }
