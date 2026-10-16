@@ -1,0 +1,131 @@
+:root {
+  --bg: #fff;
+  --text: #333;
+  --muted: #666;
+  --rule: #ddd;
+  --accent: #0645ad;
+  --content: 58rem;
+  --gutter: 1.25rem;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a { color: var(--accent); text-underline-offset: 0.12em; }
+a:hover, a:focus-visible { color: var(--accent); }
+
+.site-header, main, .site-footer { max-width: var(--content); margin-inline: auto; }
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem var(--gutter) 1rem;
+}
+
+.wordmark { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text); font-size: 1.85rem; font-weight: normal; text-decoration: none; }
+.wordmark-mark { display: none; }
+nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.9rem; font-size: 0.9rem; }
+nav a { text-decoration: none; }
+
+.page-grid { display: block; }
+.hero { padding: 1rem var(--gutter) 2rem; }
+.hero-copy { max-width: none; }
+.profile-photo { float: right; width: 17.6rem; margin: 0 0 1.5rem 2rem; }
+.profile-photo img { display: block; width: 100%; height: auto; }
+.profile-photo figcaption { margin-top: 0.3rem; color: var(--muted); font-size: 0.78rem; }
+.eyebrow, .note-label, .publication-year { margin: 0 0 0.7rem; color: var(--text); font-size: 0.95rem; font-weight: bold; letter-spacing: 0; text-transform: none; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: var(--sans); font-weight: normal; letter-spacing: 0; line-height: 1.25; }
+h1 { max-width: none; margin-bottom: 0.8rem; font-size: 1.65rem; }
+h2 { max-width: none; margin-bottom: 0.8rem; font-size: 1.25rem; }
+h3 { margin-bottom: 0.15rem; font-size: 1rem; line-height: 1.4; }
+.lede { max-width: 45rem; color: var(--text); font-size: 1rem; }
+.hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin-top: 1rem; font-size: 0.95rem; }
+.button-link { padding: 0; border: 0; color: var(--accent); text-decoration: underline; }
+.button-link:hover, .button-link:focus-visible { background: none; color: var(--accent); }
+.hero-note { max-width: 45rem; margin-top: 1.5rem; padding: 0; border: 0; font-size: 0.95rem; }
+.hero-note p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+
+.section { padding: 1.5rem var(--gutter); border-top: 1px solid var(--rule); }
+.section-tinted { background: transparent; }
+.section-heading { margin-bottom: 0.8rem; }
+.section-body { max-width: 46rem; }
+.section-body > p { max-width: 39rem; }
+.section-body h2 { margin-top: 2rem; }
+.section-body h2:first-child { margin-top: 0; }
+.research-figure { max-width: 42rem; margin: 1.5rem 0 2rem; }
+.research-figure img { display: block; width: 100%; height: auto; }
+.research-figure figcaption { margin-top: 0.45rem; color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+.research-figure--biology { float: right; width: 18rem; margin: 0.25rem 0 1.5rem 2rem; }
+.biology-crop { display: block; }
+.figure-panel-row { display: flex; gap: 0.25rem; margin-top: 0.25rem; }
+.figure-panel { display: block; background-image: url("assets/research-biology-figure-source.png"); background-repeat: no-repeat; background-size: 36rem auto; }
+.figure-panel--a { width: 18rem; height: 7.5rem; background-position: left top; }
+.figure-panel--c, .figure-panel--d { width: 8.875rem; height: 8rem; background-size: 30rem auto; }
+.figure-panel--c { background-position: left -8.45rem; }
+.figure-panel--d { background-position: left -17.15rem; }
+.topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem 2rem; margin-top: 1.2rem; }
+.topic-list > div { border-top: 0; padding-top: 0; }
+.topic-list span { display: none; }
+.topic-list strong { font-size: 0.95rem; }
+.topic-list p { margin: 0.1rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
+
+.publication-list { display: grid; gap: 1rem; }
+.publication { padding-bottom: 0; border-bottom: 0; }
+.publication-year { margin-bottom: 0.15rem; color: var(--muted); font-size: 0.85rem; }
+.publication h3 { max-width: 38rem; }
+.publication p:last-child { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.more-link { margin: 0; font-size: 0.9rem; }
+
+.split-content { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2rem; }
+.plain-list { margin: 2rem 0 0; padding: 0; list-style: none; }
+.plain-list li { padding: 0.7rem 0; border-top: 1px solid var(--rule); font-size: 0.92rem; }
+.plain-list span, .event-list > div > span { display: inline-block; min-width: 4.5rem; color: var(--accent); font-size: 0.8rem; }
+.cv-list { margin: 0; padding: 0; list-style: none; }
+.cv-list li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem; padding: 0.55rem 0; border-top: 1px solid var(--rule); }
+.cv-list span { color: var(--muted); font-size: 0.9rem; }
+.repo-list { margin: 1.25rem 0 0; padding-left: 1.2rem; }
+.repo-list li { margin: 0 0 0.7rem; }
+.event-list { display: grid; gap: 0.25rem; }
+.event-list > div { display: grid; grid-template-columns: 4.5rem 1fr; border-bottom: 1px solid var(--rule); padding: 0.85rem 0; }
+.event-list p { margin: 0; font-size: 0.94rem; line-height: 1.5; }
+.event-list strong { font-weight: 600; }
+.contact-body { display: grid; align-content: start; gap: 1rem; }
+.contact-body p { margin: 0; }
+.profile-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
+.profile-links a { display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
+.profile-links i { color: var(--accent); font-size: 1.05rem; }
+.email-link { width: fit-content; color: var(--accent); font-size: 1rem; text-decoration: underline; line-height: 1.2; }
+.site-footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem var(--gutter) 2rem; color: var(--muted); font-size: 0.8rem; }
+
+@media (max-width: 760px) {
+  .site-header, .page-grid { display: block; }
+  .site-header { padding-top: 1.25rem; }
+  nav { justify-content: flex-start; margin-top: 1rem; gap: 0.8rem 1rem; }
+  .hero-note { max-width: 22rem; margin-top: 1.5rem; }
+  .profile-photo { float: none; width: 14.3rem; margin: 0 0 1.25rem; }
+  .research-figure--biology { float: none; width: 18rem; max-width: 100%; margin: 1.5rem 0 2rem; }
+  .section-heading { margin-bottom: 0.8rem; }
+  .topic-list, .split-content { grid-template-columns: 1fr; }
+  .site-footer { display: block; }
+  .site-footer span { display: block; }
+  .site-footer span + span { margin-top: 0.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

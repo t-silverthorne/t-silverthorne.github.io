@@ -1,0 +1,7 @@
+{
+  "name": "t-silverthorne-academic-site",
+  "private": true,
+  "scripts": {
+    "preview": "node preview.mjs"
+  }
+}
